@@ -40,16 +40,22 @@ In this project, I initially worked with the `ggvis` library as it seemed most f
 chronic <- read.csv("assets/chronic.csv")
 molten.chronic <- melt(chronic, 
             id = c("Disease","Fiscal.Year","Gender","Age.Group"), na.rm = T)
-a <- cast(molten.chronic, Disease + Fiscal.Year ~ variable, c(mean,sd))
-M1 <- gvisMotionChart(a, idvar = 'Disease', timevar = 'Fiscal.Year')
+a <- cast(molten.chronic, Disease + Fiscal.Year ~ variable, mean)
+M1 <- gvisMotionChart(a, idvar = 'Disease',xvar="Physician.Visit.with.Disease..Visit.Count_mean",
+                      yvar="Mortality.with.Disease_mean", timevar = 'Fiscal.Year')
 print(M1, tag = 'chart')
 
 ```
 
 ---
 
-## Interesting Observations
+## Interesting Observation
 
-Probably the most interesting observation at this point is why seemingly identical
-code works for somebody else in a slidify presentation but not for me...
+One example of the interest of this data product is seen by setting the x-axis 
+to "Physician.Visit.with.Disease..Visit.Count_mean" and the y-axis to 
+"Mortality.with.Disease_mean". Three of diseases form an almost perfect straight
+line, the exception being "COPD" which reveals a very mortality rate for a low
+number of visits. Perhaps this suggests an area of intervention for our public
+health system.
 
+Hopefully this demonstrates some value in this modest data product.
