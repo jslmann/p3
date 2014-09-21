@@ -42,6 +42,12 @@ plot(gvisMotionChart(Fruits, "Fruit", "Year",
 ## starting httpd help server ... done
 ```
 
+```r
+Sys.time()
+```
+
+[1] "2014-09-21 14:05:14 MDT"
+
 ---
 
 ## Interesting Observations
