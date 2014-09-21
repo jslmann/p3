@@ -17,11 +17,12 @@ In this project, we choose to explore data published by the Canadian
 government on chronic disease. The original data can be found here:
 [Chronic Disease Data](http://www.phac-aspc.gc.ca/data-donnees/hpcdp-pspmc/assets/ccdss-scsmc-eng.csv)
 
-An explanation of the variables can be found here: [Chronic Disease Variables](http://www.phac-aspc.gc.ca/data-donnees/hpcdp-pspmc/assets/EN_CanadianAggregateDatasets.docx)
+An explanation of the variables can be found here: 
+[Chronic Disease Variables](http://www.phac-aspc.gc.ca/data-donnees/hpcdp-pspmc/assets/EN_CanadianAggregateDatasets.docx)
 
 ```{r setOptions, echo=FALSE}
-require(googleVis)
-require(reshape)
+require(googleVis, quietly=TRUE)
+require(reshape, quietly=TRUE)
 options(gvis.plot.tag="chart")
 
 ```
@@ -30,7 +31,11 @@ options(gvis.plot.tag="chart")
 
 ## The Visualisation Choices
 
-In this project, I initially worked with the `ggvis` library as it seemed most flexible and integrates very nicely with the `dplyr` library. However, one difficulty I encountered was that dynamic subsetting was somewhat clumsy. For this reason, I switched to the googleVis library which provides a lot of functionality “out of the box”. There may be some sacrifice in flexibility for this choice.
+In this project, I initially worked with the `ggvis` library as it seemed most flexible 
+and integrates very nicely with the `dplyr` library. However, one difficulty I 
+encountered was that dynamic subsetting was somewhat clumsy. For this reason, 
+I switched to the `googleVis` library which provides a lot of functionality “out 
+of the box”. There may be some sacrifice in flexibility for this choice.
 
 ---  
 
@@ -41,8 +46,11 @@ chronic <- read.csv("assets/chronic.csv")
 molten.chronic <- melt(chronic, 
             id = c("Disease","Fiscal.Year","Gender","Age.Group"), na.rm = T)
 a <- cast(molten.chronic, Disease + Fiscal.Year ~ variable, mean)
-M1 <- gvisMotionChart(a, idvar = 'Disease',xvar="Physician.Visit.with.Disease..Visit.Count_mean",
-                      yvar="Mortality.with.Disease_mean", timevar = 'Fiscal.Year')
+M1 <- gvisMotionChart(a, 
+                      idvar = 'Disease',
+                      xvar="Physician.Visit.with.Disease..Visit.Count_mean",
+                      yvar="Mortality.with.Disease_mean", 
+                      timevar = 'Fiscal.Year')
 print(M1, tag = 'chart')
 
 ```
@@ -52,9 +60,9 @@ print(M1, tag = 'chart')
 ## Interesting Observation
 
 One example of the interest of this data product is seen by setting the x-axis 
-to "Physician.Visit.with.Disease..Visit.Count_mean" and the y-axis to 
-"Mortality.with.Disease_mean". Three of diseases form an almost perfect straight
-line, the exception being "COPD" which reveals a very mortality rate for a low
+to `Physician.Visit.with.Disease..Visit.Count_mean` and the y-axis to 
+`Mortality.with.Disease_mean`. Three of diseases form an almost perfect straight
+line, the exception being `COPD` which reveals a very high mortality rate for a low
 number of visits. Perhaps this suggests an area of intervention for our public
 health system.
 

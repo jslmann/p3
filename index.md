@@ -17,32 +17,34 @@ In this project, we choose to explore data published by the Canadian
 government on chronic disease. The original data can be found here:
 [Chronic Disease Data](http://www.phac-aspc.gc.ca/data-donnees/hpcdp-pspmc/assets/ccdss-scsmc-eng.csv)
 
-An explanation of the variables can be found here: [Chronic Disease Variables](http://www.phac-aspc.gc.ca/data-donnees/hpcdp-pspmc/assets/EN_CanadianAggregateDatasets.docx)
+An explanation of the variables can be found here: 
+[Chronic Disease Variables](http://www.phac-aspc.gc.ca/data-donnees/hpcdp-pspmc/assets/EN_CanadianAggregateDatasets.docx)
 
 
-```
-## Loading required package: reshape
-```
 
 ---
 
 ## The Visualisation Choices
 
-In this project, I initially worked with the `ggvis` library as it seemed most flexible and integrates very nicely with the `dplyr` library. However, one difficulty I encountered was that dynamic subsetting was somewhat clumsy. For this reason, I switched to the googleVis library which provides a lot of functionality “out of the box”. There may be some sacrifice in flexibility for this choice.
+In this project, I initially worked with the `ggvis` library as it seemed most flexible 
+and integrates very nicely with the `dplyr` library. However, one difficulty I 
+encountered was that dynamic subsetting was somewhat clumsy. For this reason, 
+I switched to the `googleVis` library which provides a lot of functionality “out 
+of the box”. There may be some sacrifice in flexibility for this choice.
 
 ---  
 
 ## Results
 
 <!-- MotionChart generated in R 3.1.1 by googleVis 0.5.5 package -->
-<!-- Sun Sep 21 15:55:28 2014 -->
+<!-- Sun Sep 21 16:33:23 2014 -->
 
 
 <!-- jsHeader -->
 <script type="text/javascript">
  
 // jsData 
-function gvisDataMotionChartID90e0f9cd84b () {
+function gvisDataMotionChartID933a2460ca7 () {
 var data = new google.visualization.DataTable();
 var datajson =
 [
@@ -1859,14 +1861,14 @@ return(data);
 }
  
 // jsDrawChart
-function drawChartMotionChartID90e0f9cd84b() {
-var data = gvisDataMotionChartID90e0f9cd84b();
+function drawChartMotionChartID933a2460ca7() {
+var data = gvisDataMotionChartID933a2460ca7();
 var options = {};
 options["width"] =    600;
 options["height"] =    500;
 
     var chart = new google.visualization.MotionChart(
-    document.getElementById('MotionChartID90e0f9cd84b')
+    document.getElementById('MotionChartID933a2460ca7')
     );
     chart.draw(data,options);
     
@@ -1890,9 +1892,9 @@ if (newPackage)
   pkgs.push(chartid);
   
 // Add the drawChart function to the global list of callbacks
-callbacks.push(drawChartMotionChartID90e0f9cd84b);
+callbacks.push(drawChartMotionChartID933a2460ca7);
 })();
-function displayChartMotionChartID90e0f9cd84b() {
+function displayChartMotionChartID933a2460ca7() {
   var pkgs = window.__gvisPackages = window.__gvisPackages || [];
   var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
   window.clearTimeout(window.__gvisLoad);
@@ -1916,11 +1918,11 @@ callbacks.shift()();
 </script>
  
 <!-- jsChart -->  
-<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartMotionChartID90e0f9cd84b"></script>
+<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartMotionChartID933a2460ca7"></script>
  
 <!-- divChart -->
   
-<div id="MotionChartID90e0f9cd84b" 
+<div id="MotionChartID933a2460ca7" 
   style="width: 600; height: 500;">
 </div>
 
@@ -1929,9 +1931,9 @@ callbacks.shift()();
 ## Interesting Observation
 
 One example of the interest of this data product is seen by setting the x-axis 
-to "Physician.Visit.with.Disease..Visit.Count_mean" and the y-axis to 
-"Mortality.with.Disease_mean". Three of diseases form an almost perfect straight
-line, the exception being "COPD" which reveals a very mortality rate for a low
+to `Physician.Visit.with.Disease..Visit.Count_mean` and the y-axis to 
+`Mortality.with.Disease_mean`. Three of diseases form an almost perfect straight
+line, the exception being `COPD` which reveals a very high mortality rate for a low
 number of visits. Perhaps this suggests an area of intervention for our public
 health system.
 
