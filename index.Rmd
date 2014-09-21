@@ -20,8 +20,9 @@ government on chronic disease. The original data can be found here:
 An explanation of the variables can be found here: [Chronic Disease Variables](http://www.phac-aspc.gc.ca/data-donnees/hpcdp-pspmc/assets/EN_CanadianAggregateDatasets.docx)
 
 ```{r setOptions, echo=FALSE}
-options(gvis.plot.tag="chart")
 require(googleVis)
+options(gvis.plot.tag="chart")
+
 ```
 
 ---
@@ -35,8 +36,10 @@ In this project, I initially worked with the `ggvis` library as it seemed most f
 ## Results
 
 ```{r, results='asis', echo=FALSE}
+chronic <- read.csv("assets/chronic.csv")
 M1 <- gvisMotionChart(Fruits, idvar = 'Fruit', timevar = 'Year')
 print(M1, tag = 'chart')
+head(chronic)
 ```
 
 ---
