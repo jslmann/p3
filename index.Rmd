@@ -13,7 +13,7 @@ knit        : slidify::knit2slides
 
 ## The Data
 `r Sys.time()`
-this has been changed
+this has been changed !!! aoetuhasoetnuhaosenuth
 ```{r setOptions, echo=FALSE}
 options(gvis.plot.tag="chart")
 ```
