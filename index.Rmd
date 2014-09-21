@@ -21,6 +21,7 @@ An explanation of the variables can be found here: [Chronic Disease Variables](h
 
 ```{r setOptions, echo=FALSE}
 options(gvis.plot.tag="chart")
+require(googleVis)
 ```
 
 ---
@@ -33,12 +34,9 @@ In this project, I initially worked with the `ggvis` library as it seemed most f
 
 ## Results
 
-```{r, results='asis'}
-
-require(googleVis)
-plot(gvisMotionChart(Fruits, "Fruit", "Year",
-                     options=list(width=600, height=400)))
-Sys.time()
+```{r, results='asis', echo=FALSE}
+M1 <- gvisMotionChart(Fruits, idvar = 'Fruit', timevar = 'Year')
+print(M1, tag = 'chart')
 ```
 
 ---
