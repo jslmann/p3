@@ -1,8 +1,8 @@
 ---
-title       : 
+title       : Canadian Chronic Disease Data Exploration
 subtitle    : 
-author      : 
-job         : 
+author      : Joseph Mann 
+job         : aspiring data scientist
 framework   : io2012        # {io2012, html5slides, shower, dzslides, ...}
 highlighter : highlight.js  # {highlight.js, prettify, highlight}
 hitheme     : tomorrow      # 
@@ -17,11 +17,11 @@ knit        : slidify::knit2slides
 2. Write using R Markdown
 3. Use an empty line followed by three dashes to separate slides!
 
---- .class #id 
+--- .class #id &interactive
 
 ## Slide 2
 
-```{r motionchartcode, results='asis'}
+```{r motionchartcode, results='asis', opts.label = 'interactive'}
 library(googleVis)
 plot(gvisMotionChart(Fruits, "Fruit", "Year",
                      options=list(width=600, height=400)))
