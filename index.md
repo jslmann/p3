@@ -46,4 +46,6 @@ plot(gvisMotionChart(Fruits, "Fruit", "Year",
 
 ## Interesting Observations
 
+Probably the most interesting observation at this point is why seemingly identical
+code works for somebody else in a slidify presentation but not for me...
 

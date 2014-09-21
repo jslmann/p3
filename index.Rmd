@@ -33,7 +33,7 @@ In this project, I initially worked with the `ggvis` library as it seemed most f
 
 ## Results
 
-```{r motionchartcode, results='asis'}
+```{r  results='asis'}
 require(googleVis)
 plot(gvisMotionChart(Fruits, "Fruit", "Year",
                      options=list(width=600, height=400)))
@@ -43,4 +43,6 @@ plot(gvisMotionChart(Fruits, "Fruit", "Year",
 
 ## Interesting Observations
 
+Probably the most interesting observation at this point is why seemingly identical
+code works for somebody else in a slidify presentation but not for me...
 
