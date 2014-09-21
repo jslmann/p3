@@ -18,7 +18,7 @@ this has been changed
 options(gvis.plot.tag="chart")
 ```
 
---- .class #id &interactive
+---  &interactive
 
 ## Slide 2
 

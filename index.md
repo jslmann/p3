@@ -16,7 +16,7 @@ knit        : slidify::knit2slides
 this has been changed
 
 
---- .class #id &interactive
+---  &interactive
 
 ## Slide 2
 
