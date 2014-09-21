@@ -20,6 +20,8 @@ government on chronic disease. The original data can be found here:
 An explanation of the variables can be found here: 
 [Chronic Disease Variables](http://www.phac-aspc.gc.ca/data-donnees/hpcdp-pspmc/assets/EN_CanadianAggregateDatasets.docx)
 
+The data product itself is found here: [Chronic Disease Explorer](https://crema.shinyapps.io/chronic/)
+
 
 
 ---
@@ -34,7 +36,9 @@ of the box”. There may be some sacrifice in flexibility for this choice.
 
 ---  
 
-## Results
+## Results 
+
+Try adjusting `x` and `y` axis and then hitting the play button on the bottom 
 
 <!-- MotionChart generated in R 3.1.1 by googleVis 0.5.5 package -->
 <!-- Sun Sep 21 16:33:23 2014 -->
