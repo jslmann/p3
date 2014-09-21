@@ -21,6 +21,7 @@ An explanation of the variables can be found here: [Chronic Disease Variables](h
 
 ```{r setOptions, echo=FALSE}
 require(googleVis)
+require(reshape)
 options(gvis.plot.tag="chart")
 
 ```
@@ -37,9 +38,12 @@ In this project, I initially worked with the `ggvis` library as it seemed most f
 
 ```{r, results='asis', echo=FALSE}
 chronic <- read.csv("assets/chronic.csv")
-M1 <- gvisMotionChart(Fruits, idvar = 'Fruit', timevar = 'Year')
+molten.chronic <- melt(chronic, 
+            id = c("Disease","Fiscal.Year","Gender","Age.Group"), na.rm = T)
+a <- cast(molten.chronic, Disease + Fiscal.Year ~ variable, c(mean,sd))
+M1 <- gvisMotionChart(a, idvar = 'Disease', timevar = 'Fiscal.Year')
 print(M1, tag = 'chart')
-head(chronic)
+
 ```
 
 ---
