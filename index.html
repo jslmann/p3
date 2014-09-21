@@ -74,7 +74,12 @@ government on chronic disease. The original data can be found here:
     <h2>Results</h2>
   </hgroup>
   <article data-timings="">
-    <pre><code>## starting httpd help server ... done
+    <pre><code class="r">require(googleVis)
+plot(gvisMotionChart(Fruits, &quot;Fruit&quot;, &quot;Year&quot;,
+                     options=list(width=600, height=400)))
+</code></pre>
+
+<pre><code>## starting httpd help server ... done
 </code></pre>
 
   </article>

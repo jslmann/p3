@@ -32,6 +32,12 @@ In this project, I initially worked with the `ggvis` library as it seemed most f
 ## Results
 
 
+```r
+require(googleVis)
+plot(gvisMotionChart(Fruits, "Fruit", "Year",
+                     options=list(width=600, height=400)))
+```
+
 ```
 ## starting httpd help server ... done
 ```
