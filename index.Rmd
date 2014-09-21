@@ -11,9 +11,12 @@ mode        : selfcontained # {standalone, draft}
 knit        : slidify::knit2slides
 ---
 
-## Read-And-Delete
+## The Data
 
 this has been changed
+```{r setOptions, echo=FALSE}
+options(gvis.plot.tag="chart")
+```
 
 --- .class #id &interactive
 
