@@ -12,20 +12,35 @@ knit        : slidify::knit2slides
 ---
 
 ## The Data
-`r Sys.time()`
-this has been changed !!! aoetuhasoetnuhaosenuth
+
+In this project, we choose to explore data published by the Canadian
+government on chronic disease. The original data can be found here:
+[Chronic Disease Data](http://www.phac-aspc.gc.ca/data-donnees/hpcdp-pspmc/assets/ccdss-scsmc-eng.csv)
+
+An explanation of the variables can be found here: [Chronic Disease Variables](http://www.phac-aspc.gc.ca/data-donnees/hpcdp-pspmc/assets/EN_CanadianAggregateDatasets.docx)
+
 ```{r setOptions, echo=FALSE}
 options(gvis.plot.tag="chart")
 ```
 
+---
+
+## The Visualisation Choices
+
+In this project, I initially worked with the `ggvis` library as it seemed most flexible and integrates very nicely with the `dplyr` library. However, one difficulty I encountered was that dynamic subsetting was somewhat clumsy. For this reason, I switched to the googleVis library which provides a lot of functionality “out of the box”. There may be some sacrifice in flexibility for this choice.
+
 ---  &interactive
 
-## Slide 2
+## Results
 
 ```{r motionchartcode, results='asis', opts.label = 'interactive', echo=FALSE}
 require(googleVis)
 plot(gvisMotionChart(Fruits, "Fruit", "Year",
                      options=list(width=600, height=400)))
 ```
+
+---
+
+## Interesting Observations
 
 

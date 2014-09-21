@@ -48,8 +48,11 @@
     <h2>The Data</h2>
   </hgroup>
   <article data-timings="">
-    <p>2014-09-21 13:39:14
-this has been changed !!! aoetuhasoetnuhaosenuth</p>
+    <p>In this project, we choose to explore data published by the Canadian
+government on chronic disease. The original data can be found here:
+<a href="http://www.phac-aspc.gc.ca/data-donnees/hpcdp-pspmc/assets/ccdss-scsmc-eng.csv">Chronic Disease Data</a></p>
+
+<p>An explanation of the variables can be found here: <a href="http://www.phac-aspc.gc.ca/data-donnees/hpcdp-pspmc/assets/EN_CanadianAggregateDatasets.docx">Chronic Disease Variables</a></p>
 
   </article>
   <!-- Presenter Notes -->
@@ -57,43 +60,64 @@ this has been changed !!! aoetuhasoetnuhaosenuth</p>
 
 <slide class="" id="slide-2" style="background:;">
   <hgroup>
-    <h2>Slide 2</h2>
+    <h2>The Visualisation Choices</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>In this project, I initially worked with the <code>ggvis</code> library as it seemed most flexible and integrates very nicely with the <code>dplyr</code> library. However, one difficulty I encountered was that dynamic subsetting was somewhat clumsy. For this reason, I switched to the googleVis library which provides a lot of functionality “out of the box”. There may be some sacrifice in flexibility for this choice.</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-3" style="background:;">
+  <hgroup>
+    <h2>Results</h2>
   </hgroup>
   <article data-timings="">
      
 <div class='row-fluid'>
   <div class='span5'>
-    <form id="knitForm2" data-cell="2">
+    <form id="knitForm3" data-cell="3">
       <pre><code>## starting httpd help server ... done
 </code></pre>
 
-      <div id='aceeditor2' style="height:px;"></div>
+      <div id='aceeditor3' style="height:px;"></div>
       <div class='interactive btn-toolbar pull-left'>
         <div class='btn-group'>
-          <a class='btn btn-small action-button' id='runCode2' data-action='runCode'
-            data-cell='2' rel='tooltip' data-title='Run Code'>
+          <a class='btn btn-small action-button' id='runCode3' data-action='runCode'
+            data-cell='3' rel='tooltip' data-title='Run Code'>
             <i class='icon-play'></i>
           </a>
-          <a class='btn btn-small iBtn' id='testCode2' data-action='testCode'
-             data-cell='2' rel='tooltip' data-title='Test Code'>
+          <a class='btn btn-small iBtn' id='testCode3' data-action='testCode'
+             data-cell='3' rel='tooltip' data-title='Test Code'>
             <i class='icon-check'></i>
           </a>
-          <a class='btn btn-small iBtn' id='clearResult2' data-action='clearResult'
-             data-cell='2' rel='tooltip' data-title='Clear Output'>
+          <a class='btn btn-small iBtn' id='clearResult3' data-action='clearResult'
+             data-cell='3' rel='tooltip' data-title='Clear Output'>
             <i class="icon-remove"></i>
           </a>
-          <a class='btn  btn-small iBtn' id='getHint2' rel='tooltip' 
+          <a class='btn  btn-small iBtn' id='getHint3' rel='tooltip' 
             data-title="Get Hint" data-action='getHint'
-            data-cell='2' data-hint="">
+            data-cell='3' data-hint="">
             <i class="icon-bookmark"></i>
           </a>
         </div>
       </div>    </form>
   </div>
   <div class='span7'>
-    <iframe id="knitResult2" class='shiny-html-output'></iframe>
+    <iframe id="knitResult3" class='shiny-html-output'></iframe>
   </div>
 </div>
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-4" style="background:;">
+  <hgroup>
+    <h2>Interesting Observations</h2>
+  </hgroup>
+  <article data-timings="">
+    
   </article>
   <!-- Presenter Notes -->
 </slide>
@@ -110,8 +134,20 @@ this has been changed !!! aoetuhasoetnuhaosenuth</p>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=2 title='Slide 2'>
+        data-slide=2 title='The Visualisation Choices'>
          2
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=3 title='Results'>
+         3
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=4 title='Interesting Observations'>
+         4
       </a>
     </li>
   </ul>
