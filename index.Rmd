@@ -1,7 +1,7 @@
 ---
 title       : Canadian Chronic Disease Data Exploration
 subtitle    : 
-author      : Joseph Mann 
+author      : J. Mann 
 job         : aspiring data scientist
 framework   : io2012        # {io2012, html5slides, shower, dzslides, ...}
 highlighter : highlight.js  # {highlight.js, prettify, highlight}
@@ -29,7 +29,7 @@ options(gvis.plot.tag="chart")
 
 In this project, I initially worked with the `ggvis` library as it seemed most flexible and integrates very nicely with the `dplyr` library. However, one difficulty I encountered was that dynamic subsetting was somewhat clumsy. For this reason, I switched to the googleVis library which provides a lot of functionality “out of the box”. There may be some sacrifice in flexibility for this choice.
 
----  &interactive
+---  
 
 ## Results
 
